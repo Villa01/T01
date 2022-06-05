@@ -16,6 +16,15 @@ app.get('/', (req, res) => {
     })
 });
 
+app.post('/sum', (req, res) => {
+
+    const { num1, num2 } = req.body;
+
+    res.status(200).json({
+        info: num1 + num2
+    })
+});
+
 app2.post('/sub', (req, res) => {
 
     const { num1, num2 } = req.body;
